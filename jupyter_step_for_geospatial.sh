@@ -6,6 +6,7 @@ echo "export PYSPARK_DRIVER_PYTHON=/home/hadoop/anaconda/bin/jupyter" | sudo tee
 echo "export PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --ip=0.0.0.0'" | sudo tee --append /etc/spark/conf/spark-env.sh > /dev/null
 
 # optional
+export PATH=~/anaconda/bin:$PATH
 sudo yum -y install git
 git config --global user.email "zhao.yuan.work@gmail.com"
 git config --global user.name "Yuan Zhao"
