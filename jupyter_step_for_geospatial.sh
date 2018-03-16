@@ -13,11 +13,9 @@ git config --global user.name "Yuan Zhao"
 echo "y" |conda create -n playground_py36 --copy -y -q python=3.6 pyspark numpy pandas pysal scipy ipykernel
 source activate playground_py36
 echo "y" |pip install awscli
+echo "y" |pip install geopandas
 echo "y" |pip install https://github.com/python-visualization/folium/archive/master.zip
-conda install -y -c ioos geopandas=0.2.1
 source deactivate
 
-screen -dmS jupyter
-screen -r jupyter
 conda install -y nb_conda
 pyspark --master yarn
